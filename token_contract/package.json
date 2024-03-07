@@ -1,0 +1,38 @@
+{
+  "name": "token_contract",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "DEBUG='aztec:*' NODE_NO_WARNINGS=1 node --experimental-vm-modules $(yarn bin jest) --runInBand --passWithNoTests --testTimeout=15000 --forceExit"
+  },
+  "jest": {
+    "preset": "ts-jest/presets/default-esm",
+    "moduleNameMapper": {
+      "^(\\.{1,2}/.*)\\.m?js$": "$1"
+    },
+    "testRegex": "./scripts/.*\\.test\\.(ts|mjs)$",
+    "rootDir": "./scripts"
+  },
+  "dependencies": {
+    "@aztec/accounts": "^0.24.0",
+    "@aztec/aztec.js": "^0.24.0",
+    "@aztec/noir-contracts.js": "^0.24.0",
+    "@aztec/aztec-node": "^0.24.0",
+    "@aztec/l1-artifacts": "^0.24.0",
+    "@aztec/pxe": "^0.24.0",
+    "@aztec/sequencer-client": "^0.24.0",
+    "@jest/globals": "^29.7.0",
+    "@types/node": "^20.11.24",
+    "jest": "29.5.0",
+    "ts-jest": "29.1.0",
+    "typescript": "^5.3.3",
+    "winston": "^3.10.0",
+    "@types/fs-extra": "^11.0.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12"
+  }
+}
